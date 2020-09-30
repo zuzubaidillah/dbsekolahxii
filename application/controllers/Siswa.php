@@ -207,36 +207,36 @@ class Siswa extends CI_Controller
         }
     }
 
-    function hapus($id_guru = 0, $foto = 0)
+    function hapus($id_siswa = 0, $foto = 0)
     {
-        // melakukan logika terlebih dahulu untuk mengetahui $id_guru sudah ada nilainya atau tidak
-        if ($id_guru == 0 or $foto == '0') {
-            // NOTIFIKASI UNTUK DITAMPILKAN DI HALAMAN GURU
+        // melakukan logika terlebih dahulu untuk mengetahui $id_siswa sudah ada nilainya atau tidak
+        if ($id_siswa == 0 or $foto == '0') {
+            // NOTIFIKASI UNTUK DITAMPILKAN DI HALAMAN siswa
             $this->session->set_flashdata('notif', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
             <strong>Ada yang Salah!</strong> gagal hapus data, URL tidak terdapat ID.
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             </div>');
-            // REDIRECT BERPINDAH HALAMAN KE GURU
-            redirect('guru');
+            // REDIRECT BERPINDAH HALAMAN KE siswa
+            redirect('siswa');
         }
         // kita panggil dulu nama model yang kita buat
-        $this->load->model('Mguru');
+        $this->load->model('Msiswa');
 
         if ($foto != 'foto') {
             // menghilangkan foto pada directory
-            unlink(realpath('upload/guru/' . $foto));
+            unlink(realpath('upload/siswa/' . $foto));
         }
         // LOGIKA IF [JIKA SISTEM SUDAH MEMINDAHKAN FOTO KEDALAM VARIABEL LOCATION DAN mengirimkan data yang ada di dalam kurung ini ($nama, $alamat, $tanggallahir, $foto)]
-        if ($this->Mguru->guru_hapus($id_guru)) {
+        if ($this->Msiswa->siswa_hapus($id_siswa)) {
             $this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible fade show" role="alert">
                     <strong>Berhasil Disimpan!</strong> Data Sudah Tersimpan.
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                     </div>');
-            redirect('guru');
+            redirect('siswa');
         } else {
             $this->session->set_flashdata('notif', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                     <strong>Gagal Hapus Data!</strong> Data Belum Dihapus ID tidak ditemukan.
@@ -244,7 +244,7 @@ class Siswa extends CI_Controller
                         <span aria-hidden="true">&times;</span>
                     </button>
                     </div>');
-            redirect('guru');
+            redirect('siswa');
         }
     }
 
