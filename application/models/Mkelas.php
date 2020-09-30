@@ -79,4 +79,21 @@ class Mkelas extends CI_Model
         }
     }
 
+    // ($nama, $alamat, $tgl_lahir, $foto) didalam kurung ini termasuk parameter yang dikirim dari controller
+    public function kelas_hapus($id_kelas)
+    {
+        // menambahkan data melalui parameter yang telah dikirim
+        $sql = "DELETE FROM `kelas` WHERE id_kelas='$id_kelas'";
+        // code untuk memanggil pada query di database sesuai variabel $sql
+        $query = $this->db->query($sql);
+
+        // jika hasilnya berhasil disimpan
+        if ($query) {
+            // ini yang akan dijalankan hasilnya 1
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
 }
