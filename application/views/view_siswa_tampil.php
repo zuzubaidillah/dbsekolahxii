@@ -137,6 +137,24 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+        function btn_hapus(id_siswa, nama, foto) {
+
+            swal({
+                    title: "Data " + nama + " akan dihapus?",
+                    text: "Jika data di hapus, foto akan terhapus pada directory",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        window.location = "<?php echo base_url('siswa/hapus/'); ?>" + id_siswa + "/" + foto;
+                    }
+                });
+        }
+    </script>
+
     <script src="<?php echo base_url('asset/jquery-3.2.1.slim.min.js'); ?>"></script>
     <script src="<?php echo base_url('asset/popper.min.js'); ?>"></script>
     <script src="<?php echo base_url('asset/js-bootstrap.min.js'); ?>"></script>
