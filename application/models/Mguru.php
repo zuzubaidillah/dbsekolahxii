@@ -95,4 +95,21 @@ class Mguru extends CI_Model
             return 0;
         }
     }
+
+    // ($id_guru) didalam kurung ini termasuk parameter yang dikirim dari controller
+    public function guru_hapus($id_guru)
+    {
+        // menambahkan data melalui parameter yang telah dikirim
+        $sql = "DELETE FROM `guru` WHERE id_guru='$id_guru'";
+        // code untuk memanggil pada query di database sesuai variabel $sql
+        $query = $this->db->query($sql);
+
+        // jika hasilnya berhasil disimpan
+        if ($query) {
+            // ini yang akan dijalankan hasilnya 1
+            return 1;
+        } else {
+            return 0;
+        }
+    }
 }
