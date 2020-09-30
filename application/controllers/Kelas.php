@@ -116,4 +116,44 @@ class Kelas extends CI_Controller
             redirect('kelas');
         }
     }
+
+
+    function hapus($id_kelas = 0)
+    {
+        // melakukan logika terlebih dahulu untuk mengetahui $id_kelas sudah ada nilainya atau tidak
+        if ($id_kelas == 0) {
+            // NOTIFIKASI UNTUK DITAMPILKAN DI HALAMAN kelas
+            $this->session->set_flashdata('notif', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Ada yang Salah!</strong> gagal hapus data, URL tidak terdapat ID.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>');
+            // REDIRECT BERPINDAH HALAMAN KE kelas
+            redirect('kelas');
+        }
+        // kita panggil dulu nama model yang kita buat
+        $this->load->model('Mkelas');
+
+        // LOGIKA IF [mengirimkan data yang ada di dalam kurung ini ($nama, $alamat, $tanggallahir, $foto)]
+        if ($this->Mkelas->kelas_hapus($id_kelas)) {
+            $this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Berhasil Disimpan!</strong> Data Sudah Tersimpan.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>');
+            redirect('kelas');
+        } else {
+            $this->session->set_flashdata('notif', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Gagal Hapus Data!</strong> Data Belum Dihapus ID tidak ditemukan.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>');
+            redirect('kelas');
+        }
+    }
+
+    
 }
