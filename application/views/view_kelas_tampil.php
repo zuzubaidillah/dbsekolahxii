@@ -111,6 +111,25 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script>
+        function btn_hapus(id_kelas, kelas) {
+
+            swal({
+                    title: "Data " + kelas + " akan dihapus?",
+                    text: "data akan hilang di database",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        window.location = "<?php echo base_url('kelas/hapus/'); ?>" + id_kelas;
+                    }
+                });
+        }
+    </script>
+
     <script src="<?php echo base_url('asset/jquery-3.2.1.slim.min.js'); ?>"></script>
     <script src="<?php echo base_url('asset/popper.min.js'); ?>"></script>
     <script src="<?php echo base_url('asset/js-bootstrap.min.js'); ?>"></script>
