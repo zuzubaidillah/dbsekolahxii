@@ -13,7 +13,9 @@ class Kelas extends CI_Controller
         //setelah itu model akan mengirimkan data sesuai permintaan yang akan diteruskan melalui view perhatikan parameter array yang ada di $data['dtkelas] $data['dtkelas]
 
         //untuk penamaan view_home bebas asalkan sama pada file yang ada di folder views
-		$this->load->view('view_kelas_tampil', $data); 
+        $this->load->view('backend/part/header', $data);
+        $this->load->view('backend/page/kelas/view_kelas_tampil');
+        $this->load->view('backend/part/footer');
     }
 
     public function tambah()
@@ -83,7 +85,9 @@ class Kelas extends CI_Controller
         }
 
         //untuk penamaan view_kelas bebas asalkan sama pada file yang ada di folder views
-        $this->load->view('view_kelas_edit', $data);
+        $this->load->view('backend/part/header', $data);
+        $this->load->view('backend/page/kelas/view_kelas_edit');
+        $this->load->view('backend/part/footer');
         // $data ini digunakan untuk mengirim nilai hasil dari pencarian melalui model $data['dtkelas']
     }
 

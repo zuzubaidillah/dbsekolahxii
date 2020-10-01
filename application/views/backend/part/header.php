@@ -30,7 +30,7 @@
                 <a class="nav-link disabled" href="<?php echo base_url('kelas'); ?>">Kelas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="<?php echo base_url('GALERI'); ?>">GALERI</a>
+                <a class="nav-link disabled" href="<?php echo base_url('galeri'); ?>">Galeri</a>
             </li>
         </ul>
     </nav>

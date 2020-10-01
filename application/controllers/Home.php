@@ -14,6 +14,8 @@ class Home extends CI_Controller
         //setelah itu model akan mengirimkan data sesuai permintaan yang akan diteruskan melalui view perhatikan parameter array yang ada di $data['dtguru] $data['dtsiswa]
 
         //untuk penamaan view_home bebas asalkan sama pada file yang ada di folder views
-		$this->load->view('view_home', $data); 
+        $this->load->view('backend/part/header', $data);
+        $this->load->view('view_home');
+        $this->load->view('backend/part/footer');
     }
 }

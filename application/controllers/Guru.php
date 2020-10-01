@@ -116,7 +116,9 @@ class Guru extends CI_Controller
         }
 
         //untuk penamaan view_guru bebas asalkan sama pada file yang ada di folder views
-        $this->load->view('view_guru_edit', $data);
+        $this->load->view('backend/part/header', $data);
+        $this->load->view('backend/page/guru/view_guru_edit');
+        $this->load->view('backend/part/footer');
         // $data ini digunakan untuk mengirim nilai hasil dari pencarian melalui model $data['dtguru']
     }
 
