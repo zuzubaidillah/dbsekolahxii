@@ -10,6 +10,9 @@ class Guru extends CI_Controller
 
         //memanggil database melalui model dengan tidak membawa nilai apapun ke modelnya
         $data['dtguru'] = $this->Mguru->guru();
+        // membuat variabel active untuk membedakan menu
+        $data['mgurutampil'] = true;
+        $data['title'] = "Guru";
         //setelah itu model akan mengirimkan data sesuai permintaan yang akan diteruskan melalui view perhatikan parameter array yang ada di $data['dtguru] $data['dtsiswa]
 
         //untuk penamaan view_home bebas asalkan sama pada file yang ada di folder views
@@ -114,6 +117,10 @@ class Guru extends CI_Controller
             // REDIRECT BERPINDAH HALAMAN KE GURU
             redirect('guru');
         }
+
+        // membuat variabel active untuk membedakan menu
+        $data['mgurutampil'] = true;
+        $data['title'] = "Edit Guru";
 
         //untuk penamaan view_guru bebas asalkan sama pada file yang ada di folder views
         $this->load->view('backend/part/header', $data);

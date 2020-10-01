@@ -11,6 +11,9 @@ class Home extends CI_Controller
         //memanggil database melalui model dengan tidak membawa nilai apapun ke modelnya
         $data['dtguru'] = $this->Mhome->guru_limit();
         $data['dtsiswa'] = $this->Mhome->siswa_limit();
+        // membuat variabel active untuk membedakan menu
+        $data['title'] = "Home";
+        $data['mhometampil'] = true;
         //setelah itu model akan mengirimkan data sesuai permintaan yang akan diteruskan melalui view perhatikan parameter array yang ada di $data['dtguru] $data['dtsiswa]
 
         //untuk penamaan view_home bebas asalkan sama pada file yang ada di folder views

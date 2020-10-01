@@ -10,6 +10,9 @@ class Siswa extends CI_Controller
 
         //memanggil database melalui model dengan tidak membawa nilai apapun ke modelnya
         $data['dtsiswa'] = $this->Msiswa->siswa();
+        // membuat variabel active untuk membedakan menu
+        $data['msiswatampil'] = true;
+        $data['title'] = "Siswa";
         //setelah itu model akan mengirimkan data sesuai permintaan yang akan diteruskan melalui view perhatikan parameter array yang ada di $data['dtsiswa] $data['dtsiswa]
 
         //untuk penamaan view_home bebas asalkan sama pada file yang ada di folder views
@@ -114,6 +117,10 @@ class Siswa extends CI_Controller
             // REDIRECT BERPINDAH HALAMAN KE siswa
             redirect('siswa');
         }
+
+        // membuat variabel active untuk membedakan menu
+        $data['msiswatampil'] = true;
+        $data['title'] = "Edit Siswa";
 
         //untuk penamaan view_siswa bebas asalkan sama pada file yang ada di folder views
         $this->load->view('backend/part/header', $data);

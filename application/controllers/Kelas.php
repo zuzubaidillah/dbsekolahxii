@@ -10,6 +10,9 @@ class Kelas extends CI_Controller
 
         //memanggil database melalui model dengan tidak membawa nilai apapun ke modelnya
         $data['dtkelas'] = $this->Mkelas->kelas();
+        // membuat variabel active untuk membedakan menu
+        $data['mkelastampil'] = true;
+        $data['title'] = "Kelas";
         //setelah itu model akan mengirimkan data sesuai permintaan yang akan diteruskan melalui view perhatikan parameter array yang ada di $data['dtkelas] $data['dtkelas]
 
         //untuk penamaan view_home bebas asalkan sama pada file yang ada di folder views
@@ -83,6 +86,11 @@ class Kelas extends CI_Controller
             // REDIRECT BERPINDAH HALAMAN KE kelas
             redirect('kelas');
         }
+
+
+        // membuat variabel active untuk membedakan menu
+        $data['mkelastampil'] = true;
+        $data['title'] = "Edit Kelas";
 
         //untuk penamaan view_kelas bebas asalkan sama pada file yang ada di folder views
         $this->load->view('backend/part/header', $data);
