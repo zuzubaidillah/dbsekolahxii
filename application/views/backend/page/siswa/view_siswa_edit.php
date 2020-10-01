@@ -1,36 +1,4 @@
-<!doctype html>
-<html lang="en">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?php echo base_url('asset/bootstrap.min.css'); ?>">
-
-
-    <title>Edit Siswa - DbSekolah</title>
-</head>
-
-<body>
-    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-        <!-- Navbar content -->
-        <ul class="nav">
-            <li class="nav-item">
-                <a class="nav-link active" href="<?php echo base_url('home'); ?>">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('guru'); ?>">Guru</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('siswa'); ?>">Siswa</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="<?php echo base_url('kelas'); ?>">Kelas</a>
-            </li>
-        </ul>
-    </nav>
     <div class="container">
         <h1>Edit Data siswa</h1>
 
@@ -75,12 +43,3 @@
             <button type="submit" class="btn btn-primary">Simpan</button>
         </form>
     </div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="<?php echo base_url('asset/jquery-3.2.1.slim.min.js'); ?>"></script>
-    <script src="<?php echo base_url('asset/popper.min.js'); ?>"></script>
-    <script src="<?php echo base_url('asset/js-bootstrap.min.js'); ?>"></script>
-</body>
-
-</html>
