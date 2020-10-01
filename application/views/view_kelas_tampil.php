@@ -28,6 +28,12 @@
             <li class="nav-item">
                 <a class="nav-link disabled" href="<?php echo base_url('kelas'); ?>">Kelas</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="<?php echo base_url('kontak'); ?>">Kontak</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="<?php echo base_url('GALERI'); ?>">GALERI</a>
+            </li>
         </ul>
     </nav>
     <div class="container">
@@ -93,7 +99,7 @@
                             <td><?= $dg->kelas; ?></td>
                             <td>
                                 <a href="<?php echo base_url('kelas/edit/' . $dg->id_kelas); ?>" class="btn btn-primary">Edit</a>
-                                <a href="#" onclick="btn_hapus('<?php echo $dg->id_kelas; ?>','<?php echo $dg->kelas; ?>')" class="btn btn-danger">Hapus</a>    
+                                <a href="#" onclick="btn_hapus('<?php echo $dg->id_kelas; ?>','<?php echo $dg->kelas; ?>')" class="btn btn-danger">Hapus</a>
                             </td>
                         </tr>
                     <?php

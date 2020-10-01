@@ -28,8 +28,18 @@
             <li class="nav-item">
                 <a class="nav-link disabled" href="<?php echo base_url('kelas'); ?>">Kelas</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="<?php echo base_url('kontak'); ?>">Kontak</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="<?php echo base_url('GALERI'); ?>">GALERI</a>
+            </li>
         </ul>
     </nav>
+
+
+
+
     <div class="container">
         <h1>Data Keseluruhan siswa</h1>
         <button type="button" class="btn btn-success m-1" data-toggle="modal" data-target="#modal_siswa" data-whatever="@mdo">Tambah siswa</button>
@@ -155,6 +165,10 @@
                 });
         }
     </script>
+
+
+
+
 
     <script src="<?php echo base_url('asset/jquery-3.2.1.slim.min.js'); ?>"></script>
     <script src="<?php echo base_url('asset/popper.min.js'); ?>"></script>

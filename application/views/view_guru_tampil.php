@@ -1,6 +1,6 @@
+<!-- BAGIAN HEADER -->
 <!doctype html>
 <html lang="en">
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -11,7 +11,6 @@
 
     <title>Guru - DbSekolah</title>
 </head>
-
 <body>
     <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
         <!-- Navbar content -->
@@ -28,8 +27,13 @@
             <li class="nav-item">
                 <a class="nav-link disabled" href="<?php echo base_url('kelas'); ?>">Kelas</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="<?php echo base_url('GALERI'); ?>">GALERI</a>
+            </li>
         </ul>
     </nav>
+    <!-- BAGIAN HEADER -->
+    <!-- BAGIAN KONTEN -->
     <div class="container">
         <h1>Data Keseluruhan Guru</h1>
         <button type="button" class="btn btn-success m-1" data-toggle="modal" data-target="#modal_guru" data-whatever="@mdo">Tambah Guru</button>
@@ -134,7 +138,6 @@
             </tbody>
         </table>
     </div>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script>
@@ -153,6 +156,8 @@
                 });
         }
     </script>
+    <!-- BAGIAN KONTEN -->
+    <!-- BAGIAN FOTER -->
     <script script src="<?php echo base_url('asset/jquery-3.2.1.slim.min.js'); ?>"></script>
     <script src="<?php echo base_url('asset/popper.min.js'); ?>"></script>
     <script src="<?php echo base_url('asset/js-bootstrap.min.js'); ?>"></script>
@@ -160,3 +165,4 @@
 </body>
 
 </html>
+<!-- BAGIAN FOTER -->
