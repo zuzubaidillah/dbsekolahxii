@@ -13,7 +13,9 @@ class Guru extends CI_Controller
         //setelah itu model akan mengirimkan data sesuai permintaan yang akan diteruskan melalui view perhatikan parameter array yang ada di $data['dtguru] $data['dtsiswa]
 
         //untuk penamaan view_home bebas asalkan sama pada file yang ada di folder views
-        $this->load->view('view_guru_tampil', $data);
+        $this->load->view('backend/part/header', $data);
+        $this->load->view('backend/page/guru/view_guru_tampil');
+        $this->load->view('backend/part/footer');
     }
 
     public function tambah()
