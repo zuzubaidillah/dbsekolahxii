@@ -47,7 +47,6 @@ class Guru extends CI_Controller
         /* Valid Extensions TIPE FOTO YANG BISA DISIMPAN */
         $valid_extensions = array("jpg", "jpeg", "png");
 
-
         // MEMBERI LOGIKA IF (JIKA HASIL FOTO YANG DIUPLOAD TIDAK SAMA DENGAN EKSTENSI YANG DITENTUKAN MAKA AKAN ERROR)
         if (!in_array($ekstensi, $valid_extensions)) {
             // NOTIFIKASI UNTUK DITAMPILKAN DI HALAMAN GURU
